@@ -1,0 +1,18 @@
+name: first flow
+
+on: [push]
+
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: node version check
+        run: node -v
+      - name: npm version check
+        run: npm -v
+      - name: display successful message
+        run : echo "This is first script build by me"
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
